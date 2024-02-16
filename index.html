@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="config/main.css" />
+    <script src="config/main.js" type="module"></script>
+  </head>
+  <body>
+    <div class="center">
+      <h1 id="title"></h1>
+    </div>
+    <div class="center">
+      <input type="text" id="searchInput" placeholder="Search games" />
+    </div>
+    <div id="gamesContainer"></div>
+    <div class="center">
+      <p>
+        Made with Native
+        <a href="https://github.com/parcoil/nativelite">Lite</a>
+      </p>
+    </div>
+  </body>
+</html>
+<style>
+  /* Add your CSS styles here */
+  .game {
+    display: inline-block;
+    margin: 10px;
+  }
+  .game img {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+  }
+</style>
