@@ -7,7 +7,7 @@ var sitename = "Native Lite (CHANGE ME)"; // Change this to change the name of y
 // END CONFIG
 import "/./config/custom.js";
 // import "https://nativegames.net/media/nativescript.js";
-var serverUrl1 = "https://assets-taupe.vercel.app";
+var serverUrl1 = "https:/gms.speedpl.us";
 var currentPageTitle = document.title;
 document.title = `${currentPageTitle} | ${sitename}`;
 let gamesData = []; // Store original games data
