@@ -2,12 +2,11 @@
 @import url(/./config/custom.css);
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 /* Variable configuration */
-:root {
-  /* --background-color: #566eca; */
+/* :root {
   --background-color: #41444e;
   --text-color: white;
   --accent-color: #404040;
-}
+} */
 * {
   font-family: ubuntu;
 }
