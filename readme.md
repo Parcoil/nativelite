@@ -1,7 +1,7 @@
 <div align=center> 
-<img title="a title" alt="Alt text" src="native.png" height="150" /></div>
+<img title="a title" alt="Alt text" src="nativess.png" height="350" /></div>
 
-# Unblocked games site template
+<h1 align=center> Native. Unblocked games site template </h1>
 
 ### Introduction:
 
@@ -60,7 +60,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ### Disclaimer:
 
-do not remove the "Made with Native Lite" text at the bottom of the site, as doing so violates our Terms of Service.
+do not remove the "a site by parcoil network" text at the bottom of the site, as doing so violates our Terms of Service.
 
 ---
 

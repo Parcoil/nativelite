@@ -1,21 +1,25 @@
 // This changes the title of your site
 
-var sitename = "Native Lite (CHANGE ME)"; // Change this to change the name of your website.
+var sitename = "native."; // Change this to change the name of your website.
+var subtext = "v1.2"; // set the subtext
 
 // more settings in main.css
 
+
+
 // END CONFIG
+// DO NOT MODIFY IF YOU DO NOT KNOW WHAT YOUR DOING!
+
 import "/./config/custom.js";
-// import "https://nativegames.net/media/nativescript.js";
+
 var serverUrl1 = "https://parcoil-assets.onrender.com";
 var currentPageTitle = document.title;
 document.title = `${currentPageTitle} | ${sitename}`;
-let gamesData = []; // Store original games data
+let gamesData = []; 
 
-// Function to display filtered games
 function displayFilteredGames(filteredGames) {
   const gamesContainer = document.getElementById("gamesContainer");
-  gamesContainer.innerHTML = ""; // Clear previous content
+  gamesContainer.innerHTML = ""; 
 
   filteredGames.forEach((game) => {
     const gameDiv = document.createElement("div");
@@ -37,7 +41,7 @@ function displayFilteredGames(filteredGames) {
   });
 }
 
-// Function to handle search input
+
 function handleSearchInput() {
   const searchInputValue = document
     .getElementById("searchInput")
@@ -48,26 +52,21 @@ function handleSearchInput() {
   displayFilteredGames(filteredGames);
 }
 
-// Fetch games from JSON file
-fetch("./config/games.json") // Assuming games.json is located in a 'config' directory
+
+fetch("./config/games.json") 
   .then((response) => response.json())
   .then((data) => {
-    gamesData = data; // Store original games data
-    displayFilteredGames(data); // Display all games initially
+    gamesData = data;
+    displayFilteredGames(data); 
   })
   .catch((error) => console.error("Error fetching games:", error));
 
-// Add event listener for search input
+
 document
   .getElementById("searchInput")
   .addEventListener("input", handleSearchInput);
 
 document.getElementById("title").innerHTML = `${sitename}`;
 
-// // This changes the color of your site
+document.getElementById("subtitle").innerHTML = `${subtext}`
 
-// var color = "#000000";
-
-// // This changes the Background color of your site
-
-// var bgcolor = "#ffffff";
