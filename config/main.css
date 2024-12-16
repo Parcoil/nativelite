@@ -3,16 +3,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 :root {
-  --background-color: #003ba8 !important;
+  --background-color: #6a0dad; /* Purple background */
   --text-color: white !important;
   --accent-color: #4b87f7 !important;
 }
-
 
 * {
   font-family: ubuntu;
   transition: all 0.3s ease;
 }
+
 /* General styles */
 body {
   background-color: var(--background-color);
@@ -24,7 +24,40 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  overflow: hidden; /* Prevent scrolling */
+  position: relative; /* Position relative for dot animation */
 }
+
+/* Create moving dots effect */
+.dot {
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  animation: moveDots 10s infinite;
+  opacity: 0.7; /* Slightly transparent for effect */
+}
+
+@keyframes moveDots {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100vw, 100vh);
+  }
+}
+
+@keyframes fade {
+  0% { opacity: 0.7; }
+  50% { opacity: 0.1; }
+  100% { opacity: 0.7; }
+}
+
+/* Add multiple dots */
+.dot:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+.dot:nth-child(2) { top: 30%; left: 50%; animation-delay: 1s; }
+.dot:nth-child(3) { top: 70%; left: 70%; animation-delay: 2s; }
+.dot:nth-child(4) { top: 20%; left: 80%; animation-delay: 3s; }
+.dot:nth-child(5) { top: 60%; left: 40%; animation-delay: 4s; }
 
 /* Search input styles */
 #searchInput {
@@ -43,7 +76,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 #searchInput:focus {
-border: 3px solid var(--accent-color);
+  border: 3px solid var(--accent-color);
 }
 
 /* Games container styles */
@@ -58,7 +91,6 @@ border: 3px solid var(--accent-color);
 /* Game card styles */
 .game {
   margin: 10px;
-  
   text-align: center;
   flex: 1 0 200px; /* Flexbox item properties */
   max-width: 200px; /* Limit maximum width */
@@ -71,9 +103,8 @@ border: 3px solid var(--accent-color);
 .game:hover {
   transform: scale(0.95); /* Scale up on hover */
   border: 2px solid var(--accent-color);
-  
-  
 }
+
 /* Game image styles */
 .game img {
   width: 100%; /* Occupy full width of container */
@@ -104,27 +135,31 @@ border: 3px solid var(--accent-color);
     flex-basis: calc(100% - 20px); /* Single game per row */
   }
 }
+
 .center {
   justify-content: center;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
+
 @media only screen and (max-width: 450px) {
   #searchInput {
     width: 200px;
   }
 }
+
 .footer {
   margin: 10px auto;
   bottom: 0;
   justify-content: center;
   text-align: center;
   align-items: center;
-
-
 }
+
 .link {
   color: var(--accent-color);
   text-decoration: none;
 }
+
+/* Create the dots in the HTML */
